@@ -1,27 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import Review from '../Review/Review';
 import './Details.css'
 
 
 
 const Details = () => {
+    const { user } = useContext(AuthContext);
     const { _id, name, img, price, details, stock, brand, weight } = useLoaderData();
     const [reviews, setReviews] = useState([]);
     const handleReview = event => {
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const photo = form.photo.value;
+        // const names = form.name.value;
+        // const email = form.email.value;
+        // const photo = form.photo.value;
         const message = form.message.value;
 
         const review = {
             service: _id,
-            name,
-            email,
+            serviceName: name,
+            name: user.displayName,
+            email: user.email,
             message,
-            photo
+            photo: user.photoURL
         }
         fetch('http://localhost:5000/reviews', {
             method: 'POST',
@@ -95,38 +98,22 @@ const Details = () => {
                     <form onSubmit={handleReview}>
 
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <div className="card-body">
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Name</span>
-                                    </label>
-                                    <input type="text"
-                                        name="name" placeholder="Your Name" className="input input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Email</span>
-                                    </label>
-                                    <input type="text"
-                                        name="email" placeholder="email" className="input input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Photo URL</span>
-                                    </label>
-                                    <input type="text"
-                                        name="photo" placeholder="Your Photo URL" className="input input-bordered" />
+                            {
+                                user?.uid ? <div className="card-body">
 
-                                </div>
-                                <div className="form-control">
 
-                                    <textarea className="textarea textarea-bordered h-24" placeholder="Your Review" name="message" ></textarea>
+                                    <div className="form-control">
 
-                                </div>
-                                <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Add Review</button>
-                                </div>
-                            </div>
+                                        <textarea className="textarea textarea-bordered h-24" placeholder="Your Review" name="message" ></textarea>
+
+                                    </div>
+                                    <div className="form-control mt-6">
+                                        <button className="btn btn-primary">Add Review</button>
+                                    </div>
+                                </div> : <>
+                                    <h2 className='text-3xl font-bold'>Please Login for add review </h2>
+                                    <Link className='btn' to={'/login'}>Login</Link></>
+                            }
                         </div>
 
                     </form>
