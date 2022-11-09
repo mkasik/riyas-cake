@@ -15,7 +15,7 @@ const ServiceThree = ({ service }) => {
                         <div className="badge badge-outline">Price: {price} TK</div>
                         <div className="badge badge-outline">Weight: {weight}</div>
                     </div>
-                    <p>{details}</p>
+                    <p>{`${details.slice(0, 100)}`} ...</p>
 
                     <div className="card-actions justify-center">
                         <Link to={`/details/${_id}`}><button className="btn btn-primary">View Details</button></Link>
