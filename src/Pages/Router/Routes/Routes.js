@@ -1,8 +1,10 @@
 import Main from "../../../Layout/Main";
+import AddServices from "../../AddServices/AddServices";
 import Blog from "../../Blog/Blog/Blog";
 import Details from "../../Details/Details";
 import Home from "../../Home/Home/Home";
 import Login from "../../Login/Login";
+import MyReviews from "../../MyReviews/MyReviews";
 import Register from "../../Register/Register";
 import Services from "../../Services/Services/Services";
 
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>,
+            },
+            {
+                path: '/addservices',
+                element: <AddServices></AddServices>,
+            },
+            {
+                path: '/myreviews',
+                element: <MyReviews></MyReviews>,
             },
             {
                 path: '/details/:id',

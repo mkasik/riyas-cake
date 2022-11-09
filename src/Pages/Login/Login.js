@@ -16,6 +16,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                console.log(user.uid);
+                alert('Login Succesfully');
                 form.reset();
 
             })
