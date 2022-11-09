@@ -2,11 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import img from './preview-removebg-preview.png';
+import { FaGoogle } from "react-icons/fa";
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
     const [error, setError] = useState('');
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, googleProviderLogin } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
@@ -25,6 +28,15 @@ const Login = () => {
                 console.error(e)
                 setError(e.message)
             });
+    }
+    const handleGoogleSignIn = () => {
+
+        googleProviderLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
     }
     return (
         <div>
@@ -58,7 +70,11 @@ const Login = () => {
                                     New To Riya's Cake? Please
                                     <Link to={'/register'} ><button className="btn btn-link normal-case">Register</button></Link>
                                 </label>
-                                {error}
+                                <label >
+                                    <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary"><FaGoogle></FaGoogle> <span className='ml-1 normal-case'>Google</span></button>
+
+                                </label>
+                                {/* {error} */}
                             </div>
                         </form>
                     </div>
