@@ -25,7 +25,7 @@ const UpdateReview = () => {
 
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Add Review</button>
+                        <button className="btn btn-primary">Update Review</button>
                     </div>
                 </div>
             </form>

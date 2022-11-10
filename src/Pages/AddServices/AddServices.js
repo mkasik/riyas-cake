@@ -1,6 +1,11 @@
+import { data } from 'autoprefixer';
+import { Toast } from 'bootstrap';
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddServices = () => {
+
 
     const handleServices = event => {
         event.preventDefault();
@@ -36,7 +41,11 @@ const AddServices = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Services Added  Succesfully');
+                    toast.success('Services Added  Succesfully !', {
+                        position: toast.POSITION.TOP_RIGHT
+                    });
+                    // showToastMessage();
+
                     form.reset();
                 }
             })
@@ -46,7 +55,7 @@ const AddServices = () => {
 
     return (
         <div>
-            <h2>This is add service page</h2>
+            <h2 className='text-2xl mt-2 mb-2'>You can add services </h2>
             <form onSubmit={handleServices}>
                 <input type="text" name="name" placeholder="Service Name" className="input input-bordered w-full max-w-xs" />
                 <input type="text" name="brand" placeholder="Brand" className="input input-bordered w-full max-w-xs" />
@@ -58,6 +67,8 @@ const AddServices = () => {
                 <input type="text" name="weight" placeholder="Weight" className="input input-bordered w-full max-w-xs" />
                 <button className='btn bg-primary mt-1 mb-1'>Add Service</button>
             </form>
+
+            <ToastContainer />
         </div>
     );
 };

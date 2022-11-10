@@ -6,7 +6,7 @@ const ServiceThree = ({ service }) => {
     return (
         <div>
             <div className="card card-compact w-96 m-auto  bg-base-100 shadow-xl">
-                <figure className='w-96 h-52'><img src={img} alt="Shoes" /></figure>
+                <figure className='w-96 h-52'><img src={img} alt="Cake" /></figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}
 
