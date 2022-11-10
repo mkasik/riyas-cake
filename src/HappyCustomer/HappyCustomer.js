@@ -7,9 +7,9 @@ const HappyCustomer = () => {
     return (
         <div>
             <h1 className='text-3xl font-semibold'>Happy Customer</h1>
-            <div class="grid grid-cols-3 gap-4 mt-6 mb-8">
+            <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 mb-8">
                 <div  >
-                    <img className='h-40 w-40 m-auto rounded-full  ' alt='' src={img1}></img>
+                    <img className='grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-40 w-40 m-auto rounded-full  ' alt='' src={img1}></img>
                     <p className='m-auto text-base mt-2 w-2/3'> “Amazing food. PERIOD. Service is always perfect, food is always on point and your all cake are attrack to me so good “</p>
                     <h3 className='text-2xl font-semibold mt-1'>David Max</h3>
 

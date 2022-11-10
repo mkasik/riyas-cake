@@ -13,7 +13,7 @@ const MyReviews = () => {
     const [review, setReview] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://cake-server-mocha.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])
@@ -25,7 +25,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://cake-server-mocha.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

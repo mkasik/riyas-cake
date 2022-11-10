@@ -12,7 +12,7 @@ const Home = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services3')
+        fetch('https://cake-server-mocha.vercel.app/services3')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

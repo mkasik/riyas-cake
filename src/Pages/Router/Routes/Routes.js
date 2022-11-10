@@ -47,12 +47,12 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <Details></Details>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://cake-server-mocha.vercel.app/services/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://cake-server-mocha.vercel.app/reviews/${params.id}`)
             },
         ]
     }

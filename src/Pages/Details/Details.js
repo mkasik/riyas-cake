@@ -29,7 +29,7 @@ const Details = () => {
             message,
             photo: user.photoURL
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://cake-server-mocha.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +50,7 @@ const Details = () => {
             .catch(err => console.error(err));
     }
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://cake-server-mocha.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -59,8 +59,8 @@ const Details = () => {
     console.log(result);
 
     return (
-        <div>
-            <div className="flex  w-11/12 mt-6 mb-6 m-auto bg-base-200 ">
+        <div className=''>
+            <div className="grid gap-4 grid-cols-1 md:flex lg:flex  w-11/12 mt-6 mb-6 m-auto bg-base-200 ">
                 <div className="grid  flex-grow card bg-base-100 rounded-box place-items-center">
 
                     <img className='rounded-md ' alt='' src={img}></img>
@@ -87,7 +87,7 @@ const Details = () => {
 
             <h1 className="text-3xl font-bold">Reviews</h1>
 
-            <div className="flex back w-full">
+            <div className="grid gap-4 grid-cols-1 md:flex lg:flex back w-full">
                 <div className="grid  flex-grow card  rounded-box place-items-center">
 
                     {/* {

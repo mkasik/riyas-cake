@@ -30,7 +30,7 @@ const AddServices = () => {
             details,
             weight
         }
-        fetch('http://localhost:5000/services', {
+        fetch('https://cake-server-mocha.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

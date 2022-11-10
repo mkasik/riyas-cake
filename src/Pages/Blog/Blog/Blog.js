@@ -1,7 +1,7 @@
 import React from 'react';
 import useTitle from '../../../hooks/useTitle';
 
-import img from './three.jpg';
+
 
 const Blog = () => {
 

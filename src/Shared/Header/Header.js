@@ -4,6 +4,7 @@ import img from './logo 2.png';
 import './Header.css'
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import { FaUserAlt } from "react-icons/fa";
+import { FaList } from "react-icons/fa";
 
 
 const Header = () => {
@@ -30,7 +31,7 @@ const Header = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end hidden lg:flex">
 
 
                     {user?.uid ?
@@ -53,6 +54,9 @@ const Header = () => {
                         </>
                     }
 
+                </div>
+                <div className="navbar-end lg:hidden">
+                    <button className='btn'><FaList></FaList></button>
                 </div>
             </div>
         </div>

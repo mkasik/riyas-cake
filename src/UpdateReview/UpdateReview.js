@@ -5,11 +5,13 @@ import useTitle from '../hooks/useTitle';
 const UpdateReview = () => {
     useTitle('Update Review')
     const update = useLoaderData();
+
+    console.log(update);
     const handleUpdate = event => {
         event.preventDefault();
         const form = event.target;
         const message = form.message.value;
-        console.log(message)
+        console.log(update);
     }
 
 
