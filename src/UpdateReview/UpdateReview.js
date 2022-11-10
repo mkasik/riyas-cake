@@ -3,6 +3,15 @@ import { useLoaderData } from 'react-router-dom';
 
 const UpdateReview = () => {
     const update = useLoaderData();
+    const handleUpdate = event => {
+        event.preventDefault();
+        const form = event.target;
+        const message = form.message.value;
+        console.log(message)
+    }
+
+
+
     return (
         <div>
             <h2 className='text-2xl'>You can update your review here</h2>
