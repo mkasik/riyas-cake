@@ -1,8 +1,12 @@
 import React from 'react';
 
+import img from './three.jpg';
+
 const Blog = () => {
     return (
         <div>
+
+
             <h2 className='text-2xl font-semibold mt-6 mb-6'>Blog</h2>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item bg-white border border-gray-200">
