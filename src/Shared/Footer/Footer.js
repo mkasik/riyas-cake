@@ -13,13 +13,7 @@ const Footer = () => {
                     <Link>Red Velvet Cake</Link>
 
                 </div>
-                <div>
-                    <span className="footer-title">Company</span>
-                    <Link>Home 9.00-24.00</Link>
-                    <Link>Home</Link>
-                    <Link>Home</Link>
-                    <Link>Home</Link>
-                </div>
+
                 <div>
                     <span className="footer-title">Legal</span>
                     <Link>About Us</Link>

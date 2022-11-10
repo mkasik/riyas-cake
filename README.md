@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Welcome to Riya's Cake
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ Website Name: Riya's Cake
+ Live Link: 
 
-## Available Scripts
+# About Home Page:
+In home page, you can see a navbar that has some button for noutes and a website logo. If you'll login in my website, you can see your profile pic in this navbar.
 
-In the project directory, you can run:
+And you can see a slider with four cake photo. You have also a services section in this homepage, You can see 3 services by card. Every card has services name, photo and price. 
 
-### `npm start`
+And you can see a section that contains my customer review is  called Happy Customer. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# About Services:
+In services page, you can see more sections by same card and it also contains service name, photo, price and details about this service. And a details button. If you click this details button you'll see details route for this services. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#  About Details Page:
+In this page, you can see two sections called services detail and review about this servics. In review section, you can see other user review about this service and if you want you can add review but you need to login first. If you login successfully, you can add review and you can see your review also. 
 
-### `npm test`
+# About Login Page:
+You can login in my website with type your valid email and password that you provided when you register in my website. You can also login via google if you want.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# About Register Page:
+You can register in this website by this page. You need to name, email, photo url and password. 
 
-### `npm run build`
+# My Review page:
+In this page, you can see your all review that you provided for your favorite services. And you can see two button like edit and deleted. If you want to deleted any review, just click this delete icon and confirm that. And if you want to edit or update your review, just click the edit icon and you'll go review update route. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# About Blog Page:
+In this page, you can see 4 question and ans for you. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# About Footer Page:
+I have a footer section for you. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

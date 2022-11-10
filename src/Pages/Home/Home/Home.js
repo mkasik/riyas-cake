@@ -62,7 +62,7 @@ const Home = () => {
                         ></ServiceThree>)
                     }
                 </div>
-                <Link className='mt-6' to={'/services'}><button className="btn btn-primary">See All Services</button></Link>
+                <Link className='mt-6' to={'/services'}><button className="btn btn-primary mb-6">See All Services</button></Link>
             </div>
 
             <HappyCustomer></HappyCustomer>

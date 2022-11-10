@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import Review from '../Review/Review';
 import './Details.css'
@@ -37,7 +38,10 @@ const Details = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Review Succesfully');
+                    toast.success('Review Added  Succesfully !', {
+                        position: toast.POSITION.TOP_RIGHT
+                    });
+
                     form.reset();
                 }
             })
@@ -84,12 +88,24 @@ const Details = () => {
             <div className="flex back w-full">
                 <div className="grid  flex-grow card  rounded-box place-items-center">
 
-                    {
+                    {/* {
                         result.map(review => <Review
                             key={review._id}
                             review={review}
                         ></Review>)
+                    } */}
+
+                    {
+                        result.length === 0 ? <h2 className='text-2xl font-semibold'>No reviews were added </h2>
+                            : <>
+                                {
+                                    result.map(review => <Review
+                                        key={review._id}
+                                        review={review}
+                                    ></Review>)
+                                }</>
                     }
+
                 </div>
 
 
@@ -110,6 +126,7 @@ const Details = () => {
                                     <div className="form-control mt-6">
                                         <button className="btn btn-primary">Add Review</button>
                                     </div>
+                                    <ToastContainer />
                                 </div> : <>
                                     <h2 className='text-3xl font-bold'>Please Login for add review </h2>
                                     <Link className='btn' to={'/login'}>Login</Link></>

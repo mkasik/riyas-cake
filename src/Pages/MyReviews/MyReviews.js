@@ -3,6 +3,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+
 const MyReviews = () => {
 
     const { user } = useContext(AuthContext);
@@ -29,6 +30,7 @@ const MyReviews = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
+
                         alert('Deleted Successfully');
                         const remaining = reviews.filter(rr => rr._id !== id);
                         setReview(remaining);
@@ -76,6 +78,7 @@ const MyReviews = () => {
                     </tbody>
                 </table>
             </div>
+
         </div>
     );
 };
