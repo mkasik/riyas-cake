@@ -1,4 +1,5 @@
 import Main from "../../../Layout/Main";
+import UpdateReview from "../../../UpdateReview/UpdateReview";
 import AddServices from "../../AddServices/AddServices";
 import Blog from "../../Blog/Blog/Blog";
 import Details from "../../Details/Details";
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
                 path: '/details/:id',
                 element: <Details></Details>,
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+            },
+            {
+                path: '/update/:id',
+                element: <UpdateReview></UpdateReview>,
+                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
             },
         ]
     }

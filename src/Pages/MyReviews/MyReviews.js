@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const MyReviews = () => {
 
@@ -61,7 +62,7 @@ const MyReviews = () => {
                                     <td>{revieww.serviceName}</td>
                                     <td>{revieww.message}</td>
                                     <td>{
-                                        <><button className='mr-2'><FaEdit></FaEdit></button>
+                                        <> <Link to={`/update/${revieww._id}`}><button className='mr-2'><FaEdit></FaEdit></button></Link>
                                             <button onClick={() => handleDelete(revieww._id)}><FaRegTrashAlt></FaRegTrashAlt></button>
                                         </>
                                     }</td>
