@@ -12,6 +12,8 @@ const UpdateReview = () => {
         const form = event.target;
         const message = form.message.value;
         console.log(update);
+        alert('Your review update successfull')
+        form.reset();
     }
 
 

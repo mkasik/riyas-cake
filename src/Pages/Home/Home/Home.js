@@ -6,6 +6,7 @@ import img4 from './four.jpg';
 import ServiceThree from '../../ServiceThree/ServiceThree';
 import { Link } from 'react-router-dom';
 import HappyCustomer from '../../../HappyCustomer/HappyCustomer';
+import Choose from '../../Choose/Choose';
 
 
 const Home = () => {
@@ -64,7 +65,7 @@ const Home = () => {
                 </div>
                 <Link className='mt-6' to={'/services'}><button className="btn btn-primary mb-6">See All Services</button></Link>
             </div>
-
+            <Choose></Choose>
             <HappyCustomer></HappyCustomer>
 
         </div>
