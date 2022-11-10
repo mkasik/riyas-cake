@@ -4,8 +4,10 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import img from './preview-removebg-preview.png';
 import { FaGoogle } from "react-icons/fa";
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+    useTitle('Login')
     const [error, setError] = useState('');
 
     const { signIn, googleProviderLogin } = useContext(AuthContext);

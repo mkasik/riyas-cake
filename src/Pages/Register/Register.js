@@ -3,10 +3,12 @@ import img from './register.png';
 import './Register.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 
 const Register = () => {
+    useTitle('Register')
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     const handleSubmit = event => {

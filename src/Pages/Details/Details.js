@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 import Review from '../Review/Review';
 import './Details.css'
 
 
 
 const Details = () => {
+    useTitle('Details')
     const { user } = useContext(AuthContext);
     const { _id, name, img, price, details, stock, brand, weight } = useLoaderData();
     const [reviews, setReviews] = useState([]);

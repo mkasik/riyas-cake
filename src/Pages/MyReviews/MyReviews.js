@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 
 const MyReviews = () => {
+    useTitle('My Reviews')
 
     const { user } = useContext(AuthContext);
 

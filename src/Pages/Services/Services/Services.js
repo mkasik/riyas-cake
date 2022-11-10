@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 import ServiceCard from '../../ServiceCard/ServiceCard';
 
 const Services = () => {
+    useTitle('Services')
     const [services, setServices] = useState([]);
 
     useEffect(() => {
