@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../hooks/useTitle';
 
 const UpdateReview = () => {
     useTitle('Update Review')
+    const [review, setReview] = useState({});
+    const [refresh, setRefresh] = useState(false);
     const update = useLoaderData();
+    if (update.success) {
+        setReview(update.data);
+        console.log("this is data", update.data)
+    } else {
+        fetch(`https://cake-server-mkasik.vercel.app/review`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(review)
+
+        }).then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert('success')
+                } else {
+                    alert('error')
+                }
+            })
+    }
 
     console.log(update);
     const handleUpdate = event => {
@@ -14,7 +36,13 @@ const UpdateReview = () => {
         console.log(update);
         alert('Your review update successfull')
         form.reset();
+
+        const review = {
+            message,
+        }
+        console.log(review);
     }
+
 
 
 

@@ -44,7 +44,7 @@ const MyReviews = () => {
 
     return (
         <div>
-            <h2 className='text-2xl font-bold'>You have {reviews.length} reviews</h2>
+            <h2 className='text-2xl font-bold'>You have {reviews.length} Reviews</h2>
 
             <div className="overflow-x-auto">
                 <table className="table w-full">
